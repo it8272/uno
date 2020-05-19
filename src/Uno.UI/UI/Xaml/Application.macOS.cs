@@ -14,6 +14,12 @@ using Uno.Extensions;
 using Uno.Logging;
 using System.Linq;
 
+#if HAS_UNO_WINUI
+using LaunchActivatedEventArgs = Microsoft.UI.Xaml.LaunchActivatedEventArgs;
+#else
+using LaunchActivatedEventArgs = Windows.ApplicationModel.Activation.LaunchActivatedEventArgs;
+#endif
+
 namespace Windows.UI.Xaml
 {
 	[Register("UnoAppDelegate")]

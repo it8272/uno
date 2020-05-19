@@ -14,6 +14,12 @@ using System.Threading;
 using Uno.UI;
 using Uno.UI.Xaml;
 
+#if HAS_UNO_WINUI
+using LaunchActivatedEventArgs = Microsoft.UI.Xaml.LaunchActivatedEventArgs;
+#else
+using LaunchActivatedEventArgs = Windows.ApplicationModel.Activation.LaunchActivatedEventArgs;
+#endif
+
 namespace Windows.UI.Xaml
 {
 	public partial class Application
